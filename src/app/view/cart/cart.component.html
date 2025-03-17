@@ -1,0 +1,130 @@
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <!-- ฝั่งซ้าย -->
+    <div class="col-5"> 
+      <div class="bg-light p-4 ms-4">
+        <div class="text-center">
+          <h3>สรุปรายการสั่งซื้อ</h3>
+          <div class="row">
+            <div class="col-6 text-start">
+              <p>จำนวน</p>
+            </div>
+            <div class="col-6 text-end">
+              <p>{{ total + " รายการ"}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-start">
+              <p> ราคาสุทธิ</p>
+            </div>
+            <div class="col-6 text-end">
+              <p> {{ totalprice + " บาท"}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 text-start">
+          <h5>ที่อยู่จัดส่งสินค้า</h5>
+          <div class="input-group mb-3">
+            <span class="input-group-text">ชื่อผู้รับ</span>
+            <input type="text" class="form-control">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">ที่อยู่</span>
+            <textarea type="text" class="form-control"></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">รหัสไปรษณีย์</span>
+            <input type="number" class="form-control">
+          </div>
+        </div>
+        <div class="py-3 text-start">
+          <h5>ช่องทางการชำระเงิน</h5>
+          <p><b>ธนาคาร : </b>กรุงไทย<br><b>เลขที่บัญชี : </b>376-0-43647-1<br><b>ชื่อบัญชี : </b>น.ส.สิริกร ณ อุบล</p>
+        </div>
+        <a routerLink="/sangatan" type="button" class="btn btn-outline-warning me-2">กลับไปหน้าสังฆทาน</a>
+        <a routerLink="/thankyou" type="button" class="btn btn-warning" (click)="pay()">ชำระเงิน</a>
+      </div>
+    </div>
+    <!-- ฝั่งขวา -->
+    <div class="col-7">
+      <h3 class="text-center mt-4">รายการสินค้า</h3>
+     
+      <div style="width: 98%; height: 525px; overflow-y: auto; padding: 10px;">
+
+        <div *ngFor="let data of listcart">
+        <div class="col">
+          <div class="card mt-2">
+            <div class="card-header text-end">
+              สถานะ : รอยืนยันการสั่งซื้อ
+            </div>
+            
+            <div class="d-flex">
+              <div class="p-2">
+                <img
+                 [src]="data.product.pic" width="170px" height="auto" >
+              </div>
+              <div class="card-body">
+                <h5 class="card-title "> {{ data.product.name}} </h5>
+                <p class="card-text ">{{ data.product.price + " บาท"}}</p>
+                <p class="card-text mb-0">รายละเอียด</p>
+                <p class="card-text mb-0 text-secondary">{{ data.product.items }}</p>
+                <div class="float-right mt-0" id="btnremove">
+
+                  <button class="btn btn-warning ms-1 " > {{ "จำนวน : " + data.amount}}</button>
+  
+                  <button  class="btn btn-danger ms-1" (click)="remove(data)">ลบรายการสินค้า</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+       
+  
+  
+  
+        
+    </div>
+  </div>
+
+</div>
+
+
+<footer class="foot ">
+  <div class="lfoot">
+    <h4>
+      เกี่ยวกับร้าน
+    </h4>
+    <ul>
+      <li>เกี่ยวกับเรา</li>
+      <li>คำถามที่พบบ่อยร่วมงานกับเรา</li>
+      <li>ร่วมงานกับเรา</li>
+    </ul>
+  </div>
+  <div class="mfoot">
+    <ul>
+      <li>นโยบายความเป็นส่วนตัวของลูกค้า</li>
+      <li>นโยบายความเป็นส่วนตัวของพนักงาน</li>
+      <li>ข้อตกลงและเงื่อนไข</li>
+    </ul>
+  </div>
+  <div class="rfoot">
+    <h4>
+      ช่องทางการติดต่อ
+    </h4>
+    <div class="social">
+      <i class="pi pi-facebook ms-2">
+      </i>
+      <i class="pi pi-twitter ms-2">
+      </i>
+      <i class="pi pi-instagram ms-2">
+      </i>
+    </div>
+  </div>
+</footer>
+<footer id="copy">
+  2022 &copy; SANGATAN All rights reserved.
+</footer>

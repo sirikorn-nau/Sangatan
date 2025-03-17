@@ -1,0 +1,159 @@
+// @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@700&display=swap');
+
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Krub', sans-serif;
+  user-select: none;
+}
+
+.nav-link {
+  color: #ffc107;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.nav {
+  --bs-nav-link-hover-color: #bb582e;
+}
+
+#pills-tab {
+  background-color: #fff;
+  border-bottom: 1.5px solid lightgray;
+}
+
+#basketprice {
+  display: inline-block;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+
+td {
+  padding: 50px 20px;
+}
+
+tr {
+
+  border-bottom: 1px solid lightgray;
+}
+
+#picpro {
+  margin-left: 50px;
+}
+
+
+
+.btn-warning {
+  color: #000;
+}
+
+.btn-outline-warning{
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(221, 198, 136);
+  border-radius: 2.5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #ffc31d; */
+  background: hsl(44, 55%, 49%, 0.50);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d39b00;
+}
+
+.nav-tabs .nav-item .nav-link {
+  background-color: #ffc107;
+  color: #FFF;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #ffc107;
+}
+
+/* for footer ja */
+
+.lfoot {
+  width: 25%;
+  margin: 0px 20%;
+  padding: 3em 0 2em 0;
+}
+
+.mfoot {
+  width: 25%;
+  margin: 0px -13%;
+  padding: 3em 0 2em 0;
+}
+
+.rfoot {
+  width: 20%;
+  margin: 0px 20%;
+  padding: 3em 0 2em 0;
+}
+
+.foot {
+  background: #ffc107;
+  color: black;
+  display: flex;
+}
+
+#copy {
+  width: 100%;
+  background: #8F3326;
+  color: whitesmoke;
+  padding: 1em 0;
+  text-align: center;
+  font-size: .8em;
+  font-weight: 700;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.social {
+  font-size: 2em;
+}
+
+li:hover {
+  color: palegoldenrod;
+}
+
+i:hover {
+  color: palegoldenrod;
+}
+
+
+
+.grid-display{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 100px;
+}
+
+.text-price{
+  color: #d39b00;   
+}
+
+#navwhite{
+  margin-top: -1px;
+}

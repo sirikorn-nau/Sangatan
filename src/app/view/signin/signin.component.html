@@ -1,0 +1,32 @@
+  <div class="container mt-5 text-center">
+    <h1>เข้าสู่ระบบ</h1>
+  </div>
+  <div class="container mt-3 text-center">
+
+    <form  [formGroup]="signinForm" id="myform">
+
+      <div class="form mb-3">
+        <input type="email" class="form-control"   formControlName="email" placeholder="อีเมลล์">
+        
+        <span *ngIf="!signinForm.get('email')?.valid" class="showtext"  [hidden]="showtext">กรุณากรอกอีเมลล์ให้ถูกต้อง (name@example.com)</span>
+      </div>
+      <div class="form">
+        <input type="password" class="form-control" formControlName="password" placeholder="รหัสผ่าน">
+        
+        <span *ngIf="!signinForm.get('password')?.valid" class="showtext"  [hidden]="showtext">กรุณากรอกรหัสผ่านให้ถูกต้อง</span>
+      </div>
+
+    </form>
+    <div class="text-end mt-3">
+      <p id="forget" style="cursor:pointer;">ลืมรหัสผ่าน</p>
+    </div>
+
+    <button (click)="submit()" id="myButton" class="container btn btn-outline-warning mt-2"
+    >เข้าสู่ระบบ</button>
+    <div class="text-center mt-3">
+      หรือ
+    </div>
+    <button  class="container btn btn-light mt-3" routerLink="/signup">สมัครสมาชิก</button>
+  </div>
+
+

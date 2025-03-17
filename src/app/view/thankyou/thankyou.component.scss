@@ -1,0 +1,48 @@
+.thankyou {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom,#F7F8F8, lightyellow);
+  background-repeat: no-repeat;
+  margin-top: -87px;
+  overflow: hidden;
+  background-attachment: fixed;}
+ 
+
+.card {
+  height: initial;
+  max-width: 620px;
+  box-shadow: 4px 8px 40px 8px rgba(250, 146, 88, 0.2);
+}
+
+h1 {
+  color: #d39b00;
+  margin-bottom: 20px;
+}
+
+p {
+  color:#aaa;
+}
+
+.go-home {
+  color: white;
+  background: #ffc107;
+  padding: 10px 50px;
+  margin: auto;
+  border-radius: 30px;
+  border: none;
+  width: 50%;
+  box-shadow: 0 0px 15px 1px #ffc107;
+  text-decoration: none;
+}
+
+.go-home:hover {
+  color: darkred;
+  background: lightyellow;
+}
+
+.btn-bottom {
+  width: 100%;
+  background-color:#d18b46;  
+}

@@ -1,0 +1,21 @@
+<div class="container-fluid p-0 bg-warning text-white text-center">
+    <nav class="navbar navbar-light">
+      <a class="ps-3 navbar-brand" href="#">
+        <img
+          src="https://media.discordapp.net/attachments/1034727241764048910/1034762758455033897/logo3_big.png?width=663&height=663"
+          width="60" height="60" alt="">
+      </a>
+   
+      <div class="d-flex" *ngIf="user | async as user; else login">
+          <button class="btn d-flex" routerLink="/success">
+        <i class="pi pi-user mt-1 me-2"></i>
+        <a class="">{{ " " + user.fname }}</a></button>
+        <a class="btn btn-outline-none text-center me-3" id="userlog" type="login" (click)="logout()">ออกจากระบบ</a>
+
+    </div>
+      <ng-template #login>
+        <a class="btn btn-outline-none text-center me-3 " id="userlog" type="login" routerLink="/signin">เข้าสู่ระบบ</a>
+      </ng-template>
+
+    </nav>  
+  </div>

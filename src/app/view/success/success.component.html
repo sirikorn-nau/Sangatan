@@ -1,0 +1,71 @@
+<h2 class="text-center my-5">ประวัติการสั่งซื้อ</h2>
+<div class="container">
+  <div class="row">
+    <div class="col" style="height: 500px; overflow-y: scroll; padding-left: 200px ; padding-right: 200px;">
+      <div *ngFor="let data of listcart">
+        
+
+          <div class="card mb-3" *ngFor="let nong of data.listcart">
+
+
+            <div class="card-header text-end">
+              สถานะ : รอจัดส่งสินค้า
+            </div>
+            <div class="d-flex">
+              <div class="p-2">
+                <img
+                  [src] = "nong.product.pic"
+                  width="150px" height="auto">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title "> {{ nong.product.name }} </h5>
+                <p class="card-text mt-0"> {{ nong.product.price + " บาท"}}</p>
+                <p class="card-text mb-0">รายละเอียดของสินค้า</p>
+                <p class="card-text mb-0 text-secondary"> {{ nong.product.items }}</p>
+                <button class="btn btn-warning ms-1" style="float: right; margin-top: -10px;" > {{ "จำนวน : " + nong.amount}}</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<footer class="foot ">
+  <div class="lfoot">
+    <h4>
+      เกี่ยวกับร้าน
+    </h4>
+    <ul>
+      <li>เกี่ยวกับเรา</li>
+      <li>คำถามที่พบบ่อยร่วมงานกับเรา</li>
+      <li>ร่วมงานกับเรา</li>
+    </ul>
+  </div>
+  <div class="mfoot">
+    <ul>
+      <li>นโยบายความเป็นส่วนตัวของลูกค้า</li>
+      <li>นโยบายความเป็นส่วนตัวของพนักงาน</li>
+      <li>ข้อตกลงและเงื่อนไข</li>
+    </ul>
+  </div>
+  <div class="rfoot">
+    <h4>
+      ช่องทางการติดต่อ
+    </h4>
+    <div class="social">
+      <i class="pi pi-facebook ms-2">
+      </i>
+      <i class="pi pi-twitter ms-2">
+      </i>
+      <i class="pi pi-instagram ms-2">
+      </i>
+    </div>
+  </div>
+</footer>
+<footer id="copy">
+  2022 &copy; SANGATAN All rights reserved.
+</footer>

@@ -1,0 +1,99 @@
+<div class="container-fluid p-0 bg-warning text-white text-center sticky-top" id="navwhite">
+    <ul class="container-fluid nav nav-pills pt-3 pb-3 ps-3 position-relative" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" type="button" routerLink="/promotion">โปรโมชั่น</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a  class="nav-link" type="button" routerLink="/sangatan">ชุดสังฆทาน</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" type="button" routerLink="/monkuse">เครื่องใช้พระสงฆ์</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" type="button"
+        > คัสตอมสังฆทาน</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" type="button" routerLink="/ordination">เครื่องบวช เครื่องกฐิน</a>
+    </li>
+    <li class="nav-item ms-auto" role="presentation">
+        <a class="nav-link" type="button" routerLink="/cart">
+          ตะกร้าสินค้า</a>
+      </li>
+
+  </ul>
+  </div>
+
+
+
+  
+
+  
+     
+   <h2 class="ms-5 my-5">รายการคัสตอมสังฆทาน</h2>
+   <div class="container">
+    <div class="grid-display">
+      <ng-container *ngFor="let data of customList">
+        <div class="row">
+          <div class="d-flex mb-5">
+            <div class="image"><img [src]="data.pic" class="img-thumbnail" width="250px" height="250px"></div>
+            <div class="ms-4 mt-1">
+              <h3>{{ data.name }}</h3>
+              <div class="d-flex">
+                <h5 class="text-price">{{ data.price + " "}}</h5>
+                <h5 class="text-secondary ms-1"> บาท</h5>
+              </div>
+              <p class="mt-4 mb-0">ประกอบด้วย</p>
+              <p class="mt-0 text-secondary mb-5">{{ data.items }}</p>
+              <div class="mt-5 pt-2">
+                <button class="btn btn-warning ms-1" (click)="minus()">-</button>
+                <input class="btn btn-outline-warning ms-1" disabled [value]="amount" style="width: 45px;">
+                <button class="btn btn-warning ms-1" (click)="plus()">+</button>
+                <button class='btn btn-warning ms-2' type='button' (click)="addcart(data)" >เพิ่มลงตะกร้า</button>
+              </div>
+            </div>
+            </div>
+          </div>
+      </ng-container>
+  </div>
+  </div>
+
+
+
+
+
+    <footer class="foot">
+      <div class="lfoot">
+        <h4>
+          เกี่ยวกับร้าน
+        </h4>
+        <ul>
+          <li>เกี่ยวกับเรา</li>
+          <li>คำถามที่พบบ่อยร่วมงานกับเรา</li>
+          <li>ร่วมงานกับเรา</li>
+        </ul>
+      </div>
+    <div class="mfoot">
+        <ul>
+          <li>นโยบายความเป็นส่วนตัวของลูกค้า</li>
+          <li>นโยบายความเป็นส่วนตัวของพนักงาน</li>
+          <li>ข้อตกลงและเงื่อนไข</li>
+        </ul>
+      </div>
+    <div class="rfoot">
+        <h4>
+          ช่องทางการติดต่อ
+        </h4>
+        <div class="social">
+            <i class="pi pi-facebook ms-2">
+            </i>
+            <i class="pi pi-twitter ms-2">
+            </i>
+            <i class="pi pi-instagram ms-2">
+            </i>
+        </div>
+      </div>
+  </footer>
+  <footer  id="copy">
+      2022 &copy; SANGATAN All rights reserved.
+    </footer>
